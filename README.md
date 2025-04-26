@@ -1,36 +1,88 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 💜Humanity Archive - Upload Message to Arweave
 
-## Getting Started
+**Humanity Archive** is a decentralized web application that allows users to write messages to the future and upload them to the Arweave blockchain using the ArConnect wallet extension.
 
-First, run the development server:
+## Gallery
+![Alt text](images/screenshot.png)
+
+## Features
+
+- **Connect ArConnect Wallet**: Connect your ArConnect wallet to interact with Arweave.
+- **Upload Messages**: Write messages and upload them to the Arweave blockchain.
+- **View Uploaded Messages**: Once uploaded, the message is stored permanently on Arweave, and users can view the transaction by clicking on a link.
+
+## Prerequisites
+
+Before running the application, ensure you have the following:
+
+- A **web browser** (Google Chrome, Firefox, etc.)
+- **ArConnect wallet extension** installed in your browser ([ArConnect](https://www.arconnect.io/))
+- **Node.js** (Recommended version: 16.x or later)
+- **npm** or **yarn** (package managers)
+
+## Setup & Installation
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/levanter914/Humanity-Archive-VibeCodingSubmission.git
+cd Humanity-Archive-VibeCodingSubmission
+```
+
+### 2. Install dependencies
+
+Run the following command to install the necessary packages:
+
+```bash
+npm install
+```
+
+or if you use `yarn`:
+
+```bash
+yarn install
+```
+
+### 3. Start the development server
+
+To run the app locally:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+or with `yarn`:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+yarn dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+The app will now be running at [http://localhost:3000](http://localhost:3000).
 
-## Learn More
+### 4. Connect ArConnect Wallet
 
-To learn more about Next.js, take a look at the following resources:
+Once the app is running, click on **Connect ArConnect Wallet** to connect your wallet. Ensure you have the **ArConnect** extension installed and configured. Upon successful connection, your wallet address will be displayed.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 5. Write and Upload a Message
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Write your message in the provided text area.
+- Click the **Upload to Arweave** button to upload the message.
+- After uploading, a link to view the transaction on Arweave will be shown.
 
-## Deploy on Vercel
+## How It Works
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. **ArConnect Wallet**: The app communicates with your ArConnect wallet for interacting with the Arweave blockchain. The wallet handles permissions, signing transactions, and dispatching the transaction.
+2. **Arweave**: The messages are uploaded to Arweave, a decentralized storage network, making the data immutable and permanently available.
+3. **Transaction**: After the message is signed and dispatched, the transaction is recorded on Arweave, and a transaction ID is provided for future reference.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Technologies Used
+
+- **Frontend**: React, Tailwind CSS
+- **Backend**: None (directly interacts with Arweave)
+- **Wallet**: ArConnect (browser extension)
+- **Blockchain**: Arweave
+
+## Known Issues
+
+- Make sure the **ArConnect wallet extension** is properly installed and configured before attempting to connect.
+- Permissions may need to be granted within the ArConnect wallet to enable full functionality (access address, sign transactions, dispatch).
